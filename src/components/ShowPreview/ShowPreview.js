@@ -11,7 +11,7 @@ function ShowPreview({ id, name, image, summary }) {
                 <Link className="t-link" to={`/shows/${id}`}>
                     {name}
                 </Link>
-                {image.medium ? <img src={image.medium} alt={name} /> : null}
+                {image && image.medium ? <img src={image.medium} alt={name} /> : null}
             </div>
             <div dangerouslySetInnerHTML={{ __html: summary }} />
         </div>
